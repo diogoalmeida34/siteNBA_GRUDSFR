@@ -1,0 +1,644 @@
+/* Reseta algumas propriedades padrão para evitar conflitos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f1faee;
+    color: #333;
+    padding-top: 60px; /* Ajusta o espaço para o header fixo */
+}
+
+/* Header */
+header {
+    background-color: #1D3557;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    font-weight: 600;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+}
+
+header img {
+    max-width: 120px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover {
+    background-color: #f1faee79;
+    border-radius: 5px;
+}
+
+/* Main Content */
+main {
+    padding: 2rem 1rem;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+h1, .homepage h1 {
+    color: #1d3557;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2%;
+    scroll-margin-top: 100px;
+}
+
+.homepage h1 {
+    padding-top: 3%;
+}
+
+/* Container para imagem e texto lado a lado */
+.image-text-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+/* Imagem do troféu da NBA */
+.image-text-container img {
+    max-width: 300px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* Estilo do parágrafo */
+.image-text-container p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    flex: 1;
+    margin: 0;
+    text-align: justify;
+    margin-left: 10px;
+}
+
+.regras p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Estilos gerais de logotipos de times */
+.teams {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 0; /* Remove padding superior se houver */
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1d3557;
+}
+
+.teams p {
+    text-align: justify;
+}
+
+.team-logo {
+    width: 120px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#team-logos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.team-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Outros ajustes de layout */
+.teams, .players, .estatisticas {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: #1d3557;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    padding-top: 2%;
+    text-align: center;
+}
+
+.teams img, .estatisticas img {
+    max-width: 120px;
+    margin: 1rem;
+}
+
+.players iframe {
+    display: block;
+    max-width: 50%;
+    margin: 1rem auto;
+    border: 10px solid #ff5733;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-image: url("../imagens/download.png") 150 round;
+    filter: sepia(0.7);
+}
+
+.players p {
+    padding-bottom: 10px;
+
+}
+
+/* Tabela de estatísticas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th, table td {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+table th {
+    background-color: #f1faee;
+    color: #1d3557;
+}
+
+/* Footer */
+footer {
+    background-color: #1D3557;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Estilo do pop-up */
+.popup {
+    display: none; /* Inicialmente escondido */
+    position: fixed; /* Fixo em relação à tela */
+    top: 50%; /* Posiciona no meio da tela */
+    left: 50%; /* Posiciona no meio da tela */
+    transform: translate(-50%, -50%); /* Centraliza o pop-up */
+    background-color: rgba(29, 53, 87, 0.7); /* Fundo semi-transparente */
+    width: 80%; /* Largura do pop-up */
+    max-width: 600px; /* Largura máxima do pop-up */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999; /* Garante que o pop-up ficará sobre outros elementos */
+}
+
+/* Estilo do conteúdo do pop-up */
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Estilo do botão de fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Estilo geral do quiz */
+#quizForm {
+    font-family: Arial, sans-serif;
+    background-color: #f1faee;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#quiz {
+    text-align: center;
+    color: #1D3557;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilo das perguntas */
+label {
+    font-size: 1.1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo dos selects */
+select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+}
+
+select:focus {
+    border-color: #1D3557;
+    outline: none;
+}
+
+/* Estilo dos botões */
+input[type="submit"], input[type="reset"] {
+    background-color: #1D3557;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #457b9d;
+}
+
+/* Estilo do pop-up */
+.popup {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(29, 53, 87, 0.8);
+    width: 80%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    z-index: 9999;
+    text-align: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#popupMessage {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#popupGif {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.close-btn {
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ff5733;
+}
+
+/* Estilo para os botões de fechar do pop-up */
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+/* Estilo de texto do pop-up */
+.popup h2 {
+    color: #1D3557;
+}
+
+#draftForm {
+    font-family: Arial, sans-serif;
+    background-color: #f1faee;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+#draftForm h1 {
+    text-align: center;
+    color: #1D3557;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilo das perguntas */
+label {
+    font-size: 1.1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilo dos campos de texto e número */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #1D3557;
+    outline: none;
+}
+
+/* Estilo para os botões de envio e reset */
+input[type="submit"], input[type="reset"] {
+    background-color: #1D3557;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: #457b9d;
+}
+
+/* Estilo dos campos de seleção de posição (radio buttons) */
+label[for="posicao"] {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Responsividade para telas pequenas (max-width: 768px) */
+/* Responsividade para telas pequenas (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Ajuste no header fixo para telas pequenas */
+    body {
+        padding-top: 100px; /* Aumenta o padding-top para dar espaço ao header */
+    }
+
+    /* Ajuste na navegação (nav) */
+    nav {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+        gap: 0.5rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 1rem;
+        font-size: 1.2rem;
+        display: block;
+        text-align: center;
+    }
+
+    /* Layout da imagem e do texto lado a lado */
+    .image-text-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .image-text-container img {
+        padding-top: 70px;
+        margin-bottom: 15px;
+        max-width: 100%; /* Imagem ocupa 100% da largura disponível */
+    }
+
+    /* Ajustes para imagens da homepage */
+    .homepage img {
+        width: 100%;
+        max-width: 100%;
+        margin: 1rem 0;
+    }
+
+    /* Ajustes para as imagens das equipes e estatísticas */
+    .teams img, .estatisticas img {
+        max-width: 100px;
+        margin: 1rem;
+    }
+
+    .estatisticas img {
+        max-width: 100%;  /* Limita a largura máxima das imagens a 100% da célula */
+        height: auto;     /* Mantém a proporção da imagem */
+        margin: 0 auto;   /* Centraliza a imagem dentro da célula */
+        display: block;   /* Garante que a imagem seja tratada como bloco */
+        object-fit: contain; /* Garante que a imagem seja contida dentro da célula sem cortar */
+    }   
+
+    .players img {
+        max-width: 80%;
+        margin: 1rem auto;
+        border: 10px solid #ff5733;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-image: url("../imagens/download.png") 150 round;
+        filter: sepia(0.7);
+    }
+
+    /* Ajustes na tabela */
+    table {
+        font-size: 0.9rem;
+        width: 100%;
+        margin: 0 auto;
+        table-layout: fixed; /* Ajusta as colunas de forma que não saiam da tela */
+    }
+
+    table th, table td {
+        padding: 0.6rem;
+        border: 1px solid #ccc;
+        text-align: center;
+    }
+
+    /* Footer ajustado para telas menores */
+    footer {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    /* Efeito de hover nas imagens das equipes */
+    .teams img {
+        max-width: 100%;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .teams img:hover {
+        box-shadow: 0 0 15px 5px #1D3557;
+    }
+
+    /* Estilos para o formulário de quiz */
+    #quizForm {
+        padding: 1rem;
+        width: 90%; /* Aumenta a largura do formulário */
+        margin: 0 auto;
+    }
+
+    #quiz {
+        font-size: 1.4rem; /* Ajusta o tamanho da fonte para ficar mais legível */
+    }
+
+    select, input[type="submit"], input[type="reset"] {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+        width: 100%; /* Ocupa toda a largura disponível */
+        margin-top: 1rem;
+    }
+
+    /* Estilos para o formulário de draft */
+    #draftForm {
+        padding: 1rem;
+        width: 90%; /* Aumenta a largura do formulário */
+        margin: 0 auto;
+    }
+
+    #draftForm h1 {
+        font-size: 1.5rem;
+    }
+
+    input[type="text"], input[type="number"] {
+        font-size: 1rem;
+        width: 100%; /* Ocupa toda a largura disponível */
+        padding: 0.8rem;
+    }
+
+    input[type="submit"], input[type="reset"] {
+        padding: 0.8rem 1.5rem;
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    /* Melhorias no formulário de quiz e draft */
+    #quizForm select, #draftForm input[type="text"], #draftForm input[type="number"] {
+        width: 100%;
+    }
+
+    /* Botões de formulário responsivos */
+    input[type="submit"], input[type="reset"] {
+        padding: 12px;
+        font-size: 1.1rem;
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    /* Ajustes de espaçamento em geral */
+    .image-text-container p, .players p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-left: 0;
+        margin-bottom: 10px;
+        padding: 0 1rem;
+    }
+
+    .homepage h1 {
+        font-size: 1.8rem;
+    }
+
+    .teams, .players, .estatisticas {
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    /* Ajustes para tabelas em telas pequenas */
+    table th, table td {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    /* Layout para imagens das equipes */
+    .teams img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    /* Ajustes nos links da navegação */
+    nav ul li a {
+        padding: 1rem;
+        font-size: 1rem;
+        display: block;
+    }
+}

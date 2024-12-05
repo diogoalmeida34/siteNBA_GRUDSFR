@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="icon" href="./imagens/faviconNBA.png" type="image/png">
+</head>
+<body>
+    <header>
+        <a href="#top"><img src="./imagens/nba-logo.png" alt="Logotipo NBA"></a>
+        <nav>
+            <ul>
+                <li><a href="#top">Home</a></li>
+                <li><a href="#reg">Regras</a></li>
+                <li><a href="#tim">Times</a></li>
+                <li><a href="#dra">Draft 2025</a></li>
+                <li><a href="#joga">Jogadores</a></li>
+                <li><a href="#score">Estatísticas</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="homepage">
+            <h1>Seja Bem-Vindo ao site da NBA! 🏀</h1>
+            <div class="image-text-container">
+                <img src="./imagens/image-removebg.png" alt="Troféu Bill Russel">
+                <p>A NBA é uma das ligas mais populares e influentes do mundo, com uma base de fãs global superior a 2,4 bilhões de pessoas, espalhados por regiões como Europa, Ásia, África e América do Norte. Com ícones como Michael Jordan, Kobe Bryant, LeBron James e Stephen Curry, a liga não é apenas um evento esportivo, mas um fenômeno cultural, impactando a moda, a publicidade e a mídia. 
+                    A NBA também tem um forte engajamento digital, com mais de 50 milhões de seguidores nas principais redes sociais e milhões de visitantes mensais em seu site oficial, NBA.com. A liga investe na expansão internacional com eventos como os "NBA Global Games" e "NBA China Games", além de exibir jogos em diversos países.
+                    Financeiramente, a NBA é uma das ligas mais lucrativas do planeta, com o valor médio das franquias ultrapassando 3 bilhões de dólares e gerando bilhões em receitas anuais por meio de direitos de transmissão, patrocínios e vendas de ingressos. Considerada a liga de basquete de mais alto nível, sua temporada regular vai de outubro a abril, culminando nos emocionantes playoffs e na disputa pelo título.
+                    A NBA também se destaca pela inovação, utilizando tecnologias como análise de dados, realidade virtual e transmissões ao vivo por streaming, o que a mantém na vanguarda do entretenimento esportivo global.</p>
+            </div>
+        </div>
+        <h1 id="reg">Regras</h1>
+        <div class="regras">
+            <p>Durante a temporada regular da NBA, as equipes competem contra times da sua própria conferência, assim como contra times da conferência oposta. As franquias acumulam vitórias e derrotas, o que determina a classificação para os playoffs. As equipes que se destacam durante essa fase avançam para a fase final da temporada, os playoffs, onde as franquias mais bem classificadas de cada conferência se enfrentam em séries eliminatórias até que um time de cada conferência se torne campeão da Conferência Leste e da Conferência Oeste. Esses dois campeões então disputam as Finais da NBA para determinar o grande vencedor da liga.</p>
+            <p>Em relação às regras principais da NBA, o jogo é dividido em quatro quartos de 12 minutos cada, com intervalos curtos de 2 minutos entre o primeiro e o segundo, e o terceiro e o quarto. O intervalo principal, entre o segundo e o terceiro quarto, dura 15 minutos. Se o jogo terminar empatado após os 48 minutos de tempo regulamentar, uma prorrogação de 5 minutos é jogada até que haja um vencedor. Quanto à pontuação, um arremesso feito dentro da linha de 3 pontos vale 2 pontos, enquanto um arremesso de trás da linha de 3 pontos vale 3 pontos. Além disso, um lance livre vale 1 ponto e é concedido após faltas cometidas durante o jogo.</p>
+            <p>As faltas são um aspecto importante do jogo. A falta pessoal ocorre quando um jogador entra em contato ilegal com o adversário, enquanto a falta técnica é aplicada por comportamentos antidesportivos ou infrações relacionadas ao treinador ou à equipe. A falta antidesportiva é uma infração mais grave, cometida de forma intencional ou excessiva, e pode resultar em penalidades adicionais. Se um jogador acumular 6 faltas pessoais, ele é desqualificado do jogo, o que é conhecido como "falta por eliminação".</p>
+            <p>Quanto à posse de bola, o time tem 24 segundos para tentar um arremesso, ou a posse é transferida para o time adversário. Caso o time não consiga atravessar a linha do meio-campo em 8 segundos, ou não faça um arremesso dentro de 24 segundos, é considerada uma violação, e a posse é transferida. Além disso, os jogadores devem driblar a bola enquanto se movem, e qualquer violação de "andada", ou seja, dar mais de dois passos sem driblar, resulta em perda de posse. Se um jogador for derrubado enquanto tenta um arremesso, ele recebe lances livres, dependendo de onde o arremesso foi tentado.</p>
+            <p>As equipes podem fazer substituições durante o jogo, sem limite de número, mas um jogador substituído não pode retornar até que uma parada no jogo ocorra. Os técnicos têm um número limitado de tempos mortos que podem ser solicitados durante a partida, o que permite que eles ajustem estratégias e instruam os jogadores.</p>
+            <p>Cada time tem cinco jogadores em quadra, distribuídos nas posições de armador, ala, ala-pivô e pivô. Além disso, a NBA também é famosa por suas intensas rivalidades, como a histórica entre Los Angeles Lakers (Oeste) e Boston Celtics (Leste). O torneio dos playoffs é fundamental para definir os campeões de cada conferência, que depois disputam as Finais da NBA, coroando o vencedor da temporada.</p>
+        </div>
+        <div class="teams">
+            <h1 id="tim">Times</h1>
+            <p>As franquias da NBA são as equipes que compõem a liga de basquete profissional dos Estados Unidos. Cada franquia é uma organização independente, que possui direitos para competir na NBA, e sua administração pode ser realizada por um proprietário ou um grupo de investidores. As franquias são distribuídas entre duas conferências: a Conferência Leste e a Conferência Oeste</p><br>
+            <!-- Filtros para selecionar a conferência e a divisão -->
+            <select id="conference-division-select">
+                <option value="">Todos as equipes</option>
+                <optgroup label="Conferências">
+                    <option value="oeste">Conferência Oeste</option>
+                    <option value="leste">Conferência Leste</option>
+                <optgroup label="Divisões">
+                    <option value="atlantico">Divisão Atlântico</option>
+                    <option value="central">Divisão Central</option>
+                    <option value="sudeste">Divisão Sudeste</option>
+                    <option value="noroeste">Divisão Noroeste</option>
+                    <option value="pacifico">Divisão Pacífico</option>
+                    <option value="sudoeste">Divisão Sudoeste</option>
+            </select>
+            <!-- Container onde os logotipos das equipes serão exibidos -->
+            <div id="team-logos-container">
+                <!-- Logotipos das equipes serão inseridos aqui -->
+                <img src="./imagens/OESTE/logo-dallas-mavericks-4096.png" alt="Dallas Mavericks" class="team-logo" data-team="dallas-mavericks">
+                <img src="./imagens/OESTE/logo-denver-nuggets-2048.png" alt="Denver Nuggets" class="team-logo" data-team="denver-nuggets">
+                <img src="./imagens/OESTE/logo-houston-rockets-4096.png" alt="Houston Rockets" class="team-logo" data-team="houston-rockets">
+                <img src="./imagens/OESTE/logo-los-angeles-clippers-4096.png" alt="Los Angeles Clippers" class="team-logo" data-team="los-angeles-clippers">
+                <img src="./imagens/OESTE/logo-los-angeles-lakers-4096.png" alt="Los Angeles Lakers" class="team-logo" data-team="los-angeles-lakers">
+                <img src="./imagens/OESTE/logo-memphis-grizzlies-2048.png" alt="Memphis Grizzlies" class="team-logo" data-team="memphis-grizzlies">
+                <img src="./imagens/OESTE/logo-minnesota-timberwolves-2048.png" alt="Minnesota Timberwolves" class="team-logo" data-team="minnesota-timberwolves">
+                <img src="./imagens/OESTE/logo-new-orleans-pelicans-2048.png" alt="New Orleans Pelicans" class="team-logo" data-team="new-orleans-pelicans">
+                <img src="./imagens/OESTE/logo-phoenix-suns-4096.png" alt="Phoenix Suns" class="team-logo" data-team="phoenix-suns">
+                <img src="./imagens/OESTE/logo-portland-trail-blazers-2048.png" alt="Portland Trail Blazers" class="team-logo" data-team="portland-trail-blazers">
+                <img src="./imagens/OESTE/logo-sacramento-kings-2048.png" alt="Sacramento Kings" class="team-logo" data-team="sacramento-kings">
+                <img src="./imagens/OESTE/logo-san-antonio-spurs-2048.png" alt="San Antonio Spurs" class="team-logo" data-team="san-antonio-spurs">
+                <img src="./imagens/OESTE/logo-utah-jazz-2048.png" alt="Utah Jazz" class="team-logo" data-team="utah-jazz">
+                <img src="./imagens/OESTE/logo-golden-state-warriors-4096.png" alt="Golden State Warriors" class="team-logo" data-team="golden-state-warriors">
+                <img src="./imagens/OESTE/logo-oklahoma-city-thunder-1024.png" alt="Oklahoma City Thunder" class="team-logo" data-team="oklahoma-city-thunder">
+                <img src="./imagens/LESTE/logo-atlanta-hawks-2048.png" alt="Atlanta Hawks" class="team-logo" data-team="atlanta-hawks">
+                <img src="./imagens/LESTE/logo-boston-celtics-4096.png" alt="Boston Celtics" class="team-logo" data-team="boston-celtics">
+                <img src="./imagens/LESTE/logo-charlotte-hornets-2048.png" alt="Charlotte Hornets" class="team-logo" data-team="charlotte-hornets">
+                <img src="./imagens/LESTE/logo-chicago-bulls-4096.png" alt="Chicago Bulls" class="team-logo" data-team="chicago-bulls">
+                <img src="./imagens/LESTE/logo-cleveland-cavaliers-2048.png" alt="Cleveland Cavaliers" class="team-logo" data-team="cleveland-cavaliers">
+                <img src="./imagens/LESTE/logo-detroit-pistons-2048.png" alt="Detroit Pistons" class="team-logo" data-team="detroit-pistons">
+                <img src="./imagens/LESTE/logo-indiana-pacers-4096.png" alt="Indiana Pacers" class="team-logo" data-team="indiana-pacers">
+                <img src="./imagens/LESTE/logo-miami-heat-4096.png" alt="Miami Heat" class="team-logo" data-team="miami-heat">
+                <img src="./imagens/LESTE/logo-milwaukee-bucks-4096.png" alt="Milwaukee Bucks" class="team-logo" data-team="milwaukee-bucks">
+                <img src="./imagens/LESTE/logo-brooklyn-nets-4096.png" alt="Brooklyn Nets" class="team-logo" data-team="brooklyn-nets">
+                <img src="./imagens/LESTE/logo-new-york-knicks-4096.png" alt="New York Knicks" class="team-logo" data-team="new-york-knicks">
+                <img src="./imagens/LESTE/logo-orlando-magic-4096.png" alt="Orlando Magic" class="team-logo" data-team="orlando-magic">
+                <img src="./imagens/LESTE/logo-philadelphia-76ers-4096.png" alt="Philadelphia 76ers" class="team-logo" data-team="philadelphia-76ers">
+                <img src="./imagens/LESTE/logo-toronto-raptors-4096.png" alt="Toronto Raptors" class="team-logo" data-team="toronto-raptors">
+                <img src="./imagens/LESTE/logo-washington-wizards-2048.png" alt="Washington Wizards" class="team-logo" data-team="washington-wizards">
+            </div>
+        </div>
+        <div id="team-popup" class="popup">
+            <div class="popup-content">
+                <span id="close-popup" class="close-btn">&times;</span>
+                <!-- Logo do Time -->
+                <div id="team-logo-container" class="team-logo-container">
+                    <img id="team-logo" src="#" alt="Logo do time" class="team-logo" />
+                </div>                
+                <!-- Nome do Time -->
+                <h3 id="team-name"></h3>
+                <!-- Informações do Time -->
+                <p><strong>Arena:</strong> <span id="team-arena"></span></p>
+                <p><strong>Fundação:</strong> <span id="team-founded"></span></p>
+                <p><strong>Localização:</strong> <span id="team-location"></span></p>
+                <p><strong>Conferência:</strong> <span id="team-conference"></span></p>
+                <p><strong>Divisão:</strong> <span id="team-division"></span></p>
+                <!-- Títulos -->
+                <p><strong>Títulos da NBA:</strong> <span id="team-titles"></span></p>
+                <p><strong>Títulos de Conferência:</strong> <span id="team-conference-titles"></span></p>
+                <!-- Mascote -->
+                <p><strong>Mascote:</strong> <span id="team-mascot"></span></p>
+                <!-- Links -->
+                <p><strong>Site oficial:</strong> <a id="team-website" href="" target="_blank">Visitar</a></p>
+            </div>
+        </div>           
+        <h1 id="joga">Jogadores</h1>
+        <div class="players">
+            <p>Os jogadores da NBA são os atletas profissionais que competem na liga de basquete profissional dos Estados Unidos. Os jogadores da NBA são conhecidos por sua habilidade, talento e dedicação ao esporte, e são considerados os melhores jogadores de basquete do mundo. Os jogadores da NBA são contratados pelas franquias da liga, e são responsáveis por representar suas equipes em competições nacionais e internacionais. Os jogadores da NBA são reconhecidos por sua habilidade técnica, física e mental, e são admirados por fãs de todo o mundo.</p>
+            <p>Clique na foto abaixo para ver a batalha pelo posto de GOAT do basquete.</p>
+            <a href="./assets/BattleGoats.mp4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uiBRWe2Zm_0?si=rJXD3UnmUwtocfPV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </a>
+        </div>
+        <!-- Formulário NBA Draft 2025 -->
+        <form id="draftForm">
+            <h1 id="dra">NBA DRAFT 2025</h1>
+            
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" placeholder="Michael"><br><br>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" placeholder="20"><br><br>
+
+            <label for="altura">Altura:</label>
+            <input type="number" id="altura" name="altura" step="0.01" placeholder="1.80"><br><br>
+
+            <label for="peso">Peso:</label>
+            <input type="text" id="peso" name="peso" placeholder="80.2"><br><br>
+
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" placeholder="Brasil"><br><br>
+
+            <label for="posicao">Posição:</label><br>
+            <input type="radio" name="posicao" id="armador" value="Armador (PG)"> Armador (PG)
+            <input type="radio" name="posicao" id="ala_armador" value="Ala-armador (SG)"> Ala-armador (SG)
+            <input type="radio" name="posicao" id="ala" value="Ala (SF)"> Ala (SF)
+            <input type="radio" name="posicao" id="ala_pivo" value="Ala-Pivô (PF)"> Ala-Pivô (PF)
+            <input type="radio" name="posicao" id="pivo" value="Pivô (C)"> Pivô (C) <br><br>
+
+            <input type="submit" value="Enviar Candidatura">
+            <input type="reset" value="Limpar">
+        </form> 
+        <audio id="audio" src="./assets/NBASound.mp3"></audio>
+        <h1 id="score">Estatísticas</h1>
+        <div class="estatisticas">
+            <p>As estatísticas da NBA são os registros de todas as informações coletadas durante os jogos da liga de basquete profissional dos Estados Unidos. As estatísticas são utilizadas para avaliar o desempenho dos jogadores e das equipes, e são fundamentais para a análise e o planejamento tático dos treinadores. As estatísticas da NBA são coletadas e registradas por uma equipe de estatísticos, que acompanham todos os jogos da liga e registram as informações relevantes em tempo real.</p>
+            <table>
+                <tr>
+                    <th>Jogador</th>
+                    <th>Feito</th>
+                </tr>
+                <tr>
+                    <th><img src="./imagens/curiosidades/lebron.png" alt="Lebron James"></th>
+                    <td rowspan="2">Maior cestinha da temporada regular (mais de 39.500)</td>
+                </tr>
+                <tr>
+                    <th colspan="1"><span>Lebron James</span></th>
+                </tr>
+                <tr>
+                    <th><img src="./imagens/curiosidades/bill.png" alt="Bill Russell"></th>
+                    <td rowspan="2">Mais títulos na carreira (11)</td>
+                </tr>
+                <tr>
+                    <th colspan="1"><span>Bill Russell</span></th>
+                </tr>
+                <tr>
+                    <th><img src="./imagens/curiosidades/RobertParish.png" alt="Robert Parish"></th>
+                    <td rowspan="2">Mais jogos disputados na carreira (1.611)</td>
+                </tr>
+                <tr>
+                    <th colspan="1"><span>Robert Parish</span></th>
+                </tr>
+                <tr>
+                    <th><img src="./imagens/curiosidades/westbrook.png" alt="Russel Westbrook"></th>
+                    <td rowspan="2">Mais triplo-duplos (182)</td>
+                </tr>
+                <tr>
+                    <th colspan="1"><span>Russel Westbrook</span></th>
+                </tr>
+                <tr>
+                    <th><img src="./imagens/curiosidades/curry.png" alt="Stephen Curry"></th>
+                    <td rowspan="2">Mais chutes de 3 acertados na carreira (mais de 3.500)</td>
+                </tr>
+                <tr>
+                    <th colspan="1"><span>Stephen Curry</span></th>
+                </tr>
+                <tr>
+                    <th><img src="./imagens/curiosidades/KareemAbdul-Jabbar.png" alt="Kareem Abdul-Jabbar"></th>
+                    <td rowspan="2">Mais vezes MVP (6)</td>
+                </tr>
+                <tr>
+                    <th colspan="1"><span>Kareem Abdul-Jabbar</span></th>
+                </tr>
+                <tr>
+                    <th><img src="./imagens/curiosidades/JohnStockton.png" alt="John Stockton"></th>
+                    <td rowspan="2">Mais assistências na carreira (15.806)</td>
+                </tr>
+                <tr>
+                    <th colspan="1"><span>John Stockton</span></th>
+                </tr>
+                <tr>
+                    <th><img src="./imagens/curiosidades/wiltchamberlain.png" alt="Wilt Chamberlain"></th>
+                    <td rowspan="2">Maior pontuador em um único jogo (100)</td>
+                </tr>
+                <tr>
+                    <th colspan="1"><span>Wilt Chamberlain</span></th>
+                </tr>
+                <tr>
+                    <th><img src="./imagens/curiosidades/HakeemOlajuwon.png" alt="Hakeem Olajuwon"></th>
+                    <td rowspan="2">Mais tocos na carreira (3.830)</td>
+                </tr>
+                <tr>
+                    <th colspan="1"><span>Hakeem Olajuwon</span></th>
+                </tr>
+                <tr>
+                    <th><img src="./imagens/curiosidades/klay.png" alt="Klay Thompson"></th>
+                    <td rowspan="2">Mais chutes de 3 acertados em um único jogo de temporada regular (14)</td>
+                </tr>
+                <tr>
+                    <th colspan="1"><span>Klay Thompson</span></th>
+                </tr>
+                <tr>
+                    <th><img src="./imagens/curiosidades/jordan2.png" alt="Michael Jordan"></th>
+                    <td rowspan="2">Mais pontos em um mesmo jogo de playoffs (63)</td>
+                </tr>
+                <tr>
+                    <th colspan="1"><span>Michael Jordan</span></th>
+                </tr>
+                <tr>
+                    <th><img src="./imagens/curiosidades/philJackson.png" alt="Phil Jackson"></th>
+                    <td rowspan="2">Técnico com mais títulos (11)</td>
+                </tr>
+                <tr>
+                    <th colspan="1"><span>Phil Jackson</span></th>
+                </tr>
+            </table>
+        </div>
+    <!-- Quiz da NBA -->
+    <form id="quizForm">
+        <h1 id="quiz">Quiz</h1>
+        <label for="mvp">1. Quem foi o jogador que mais vezes ganhou o prêmio de MVP (Jogador Mais Valioso) da temporada regular da NBA?</label><br>
+        <select id="mvp" name="mvp">
+            <option value="">-</option>
+            <option value="kobe">Kobe Bryant</option>
+            <option value="jordan">Michael Jordan</option>
+            <option value="james">LeBron James</option>
+            <option value="kareem">Kareem Abdul-Jabbar</option>
+        </select><br><br>
+
+        <label for="time_campeao">2. Qual time da NBA tem mais títulos de campeão da liga?</label><br>
+        <select id="time_campeao" name="time_campeao">
+            <option value="">-</option>
+            <option value="celtics">Boston Celtics</option>
+            <option value="lakers">Los Angeles Lakers</option>
+            <option value="bulls">Chicago Bulls</option>
+            <option value="warriors">Golden State Warriors</option>
+        </select><br><br>
+
+        <label for="king">3. Qual é o nome do jogador conhecido como "King" da NBA?</label><br>
+        <select id="king" name="king">
+            <option value="">-</option>
+            <option value="durant">Kevin Durant</option>
+            <option value="curry">Stephen Curry</option>
+            <option value="james">LeBron James</option>
+            <option value="shaquille">Shaquille O'Neal</option>
+        </select><br><br>
+
+        <label for="primeiro_pick">4. Qual jogador foi selecionado como o primeiro geral no Draft da NBA de 2003?</label><br>
+        <select id="primeiro_pick" name="primeiro_pick">
+            <option value="">-</option>
+            <option value="carmelo">Carmelo Anthony</option>
+            <option value="wade">Dwyane Wade</option>
+            <option value="james">LeBron James</option>
+            <option value="bosh">Chris Bosh</option>
+        </select><br><br>
+
+        <label for="aposentadoria">5. Em que ano Michael Jordan se aposentou pela primeira vez da NBA?</label><br>
+        <select id="aposentadoria" name="aposentadoria">
+            <option value="">-</option>
+            <option value="1993">1993</option>
+            <option value="1998">1998</option>
+            <option value="2003">2003</option>
+            <option value="2001">2001</option>
+        </select><br><br>
+
+        <label for="campeao_2016">6. Qual time foi o campeão da NBA na temporada 2015-2016?</label><br>
+        <select id="campeao_2016" name="campeao_2016">
+            <option value="">-</option>
+            <option value="heat">Miami Heat</option>
+            <option value="cavaliers">Cleveland Cavaliers</option>
+            <option value="warriors">Golden State Warriors</option>
+            <option value="spurs">San Antonio Spurs</option>
+        </select><br><br>
+
+        <label for="recorde_pontos">7. Qual jogador detém o recorde de mais pontos marcados em um único jogo de playoffs da NBA?</label><br>
+        <select id="recorde_pontos" name="recorde_pontos">
+            <option value="">-</option>
+            <option value="chamberlain">Wilt Chamberlain</option>
+            <option value="jordan">Michael Jordan</option>
+            <option value="bryant">Kobe Bryant</option>
+            <option value="lebron">LeBron James</option>
+        </select><br><br>
+
+        <label for="trofeu">8. Qual é o nome do troféu concedido ao campeão da NBA?</label><br>
+        <select id="trofeu" name="trofeu">
+            <option value="">-</option>
+            <option value="bird">Troféu Larry Bird</option>
+            <option value="russell">Troféu Bill Russell</option>
+            <option value="james">Troféu LeBron James</option>
+            <option value="jordan">Troféu Michael Jordan</option>
+        </select><br><br>
+
+        <label for="tecnico">9. Quem foi o técnico que levou o Chicago Bulls ao seu primeiro tricampeonato na década de 1990?</label><br>
+        <select id="tecnico" name="tecnico">
+            <option value="">-</option>
+            <option value="phil">Phil Jackson</option>
+            <option value="riley">Pat Riley</option>
+            <option value="popovich">Gregg Popovich</option>
+            <option value="doc">Doc Rivers</option>
+        </select><br><br>
+
+        <label for="jovem_30000">10. Qual jogador foi o mais jovem a marcar 30.000 pontos na carreira na NBA?</label><br>
+        <select id="jovem_30000" name="jovem_30000">
+            <option value="">-</option>
+            <option value="kobe">Kobe Bryant</option>
+            <option value="james">LeBron James</option>
+            <option value="durant">Kevin Durant</option>
+            <option value="nowitzki">Dirk Nowitzki</option>
+        </select><br><br>
+
+        <input type="submit" value="Conferir Respostas">
+        <input type="reset" value="Limpar"><br><br>
+        
+        <div id="resultPopup" class="popup">
+            <div class="popup-content">
+                <h2 id="popupMessage"></h2>
+                <img id="popupGif" src="#" alt="gif">
+                <br>
+                <span id="close-btn" class="close-btn" onclick="closePopup()">&times;</span>
+            </div>
+        </div>        
+    </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 NBA Media Ventures, LLC. All rights reserved.</p>
+        <p>Contato: contato@nba.com</p>
+    </footer>     
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
