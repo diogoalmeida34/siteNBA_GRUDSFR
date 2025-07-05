@@ -147,8 +147,8 @@ siteNBA_GRUDSFR-main/
 
 ## 🛡️ Licença
 
-Este projeto está licenciado sob a [Creative Commons Atribuição-NãoComercial 4.0 Internacional (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/deed.pt_BR).  
-Você pode copiar, distribuir e adaptar para fins **não comerciais**, desde que forneça os devidos **créditos ao autor**.
+Este projeto está licenciado sob a **[MIT License](LICENSE)**.  
+Seu conteúdo é utilizado exclusivamente para fins **acadêmicos e não comerciais**.
 
-© 2024 Diogo Almeida.  
-Este site é um projeto educacional e não possui afiliação oficial com a NBA.
+© 2024 Diogo Almeida  
+⚠️ Este site é um projeto educacional e **não possui qualquer afiliação oficial com a NBA**.
